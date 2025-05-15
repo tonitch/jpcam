@@ -7,7 +7,7 @@
 #define PIN_XCLK	0
 #define PIN_SIOD	26
 #define PIN_SIOC	27
-#define PIN_D7		37
+#define PIN_D7		35
 #define PIN_D6		34
 #define PIN_D5		39
 #define PIN_D4		36

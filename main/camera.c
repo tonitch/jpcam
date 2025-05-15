@@ -22,10 +22,10 @@ static camera_config_t jpcam_config = {
 	.ledc_timer     = LEDC_TIMER_0,
 	.ledc_channel   = LEDC_CHANNEL_0,
 	.pixel_format   = PIXFORMAT_JPEG,
-	.frame_size     = FRAMESIZE_UXGA,
+	.frame_size     = FRAMESIZE_XGA,
 	.jpeg_quality   = 12,
 	.fb_count       = 1,
-	.grab_mode      = CAMERA_GRAB_WHEN_EMPTY
+	/*.grab_mode      = CAMERA_GRAB_WHEN_EMPTY*/
 };
 
 esp_err_t jpcam_init(){
@@ -39,9 +39,6 @@ esp_err_t jpcam_capture(){
 		ESP_LOGE("CAMERA", "Frame buffer could not be acquired");
 		return ESP_FAIL;
 	}
-
-	//replace this with your own function
-	/*display_image(fb->width, fb->height, fb->format, fb->buf, fb->len);*/
 
 	//return the frame buffer back to be reused
 	esp_camera_fb_return(fb);
